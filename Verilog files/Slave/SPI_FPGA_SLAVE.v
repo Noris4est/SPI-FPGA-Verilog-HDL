@@ -1,10 +1,10 @@
 module SPI_FPGA_SLAVE
 #(
-	parameter CPHA				=1,	//clock phase
-	parameter CPOL				=1,	//clock polarity
-	parameter PACK_LENGTH 	=8,	//number of bits in package 
-	parameter PACK_BIT_SEQUENCE_TRANSMIT=1;//1-major bit forward;0-junior bit forward;
-	parameter PACK_BIT_SEQUENCE_RECEIVE=1;//1-major bit forward;0-junior bit forward;
+	parameter CPHA				=1,					//clock phase
+	parameter CPOL				=1,					//clock polarity
+	parameter PACK_LENGTH 	=8,					//number of bits in package 
+	parameter PACK_BIT_SEQUENCE_TRANSMIT=1,	//1-major bit forward;0-junior bit forward;
+	parameter PACK_BIT_SEQUENCE_RECEIVE=1,		//1-major bit forward;0-junior bit forward;
 	parameter PACK_LENGTH_LOG_2=$clog2(PACK_LENGTH)
 )
 /*
