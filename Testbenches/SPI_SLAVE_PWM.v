@@ -7,7 +7,7 @@ module SPI_SLAVE_PWM
 	parameter 	PACK_BIT_SEQUENCE_RECEIVE	=1,	//1-major bit forward;0-junior bit forward;								
 	parameter 	CLOCK_FREQUENCY				=50000000,
 	parameter 	MAX_VALUE						=2**PACK_LENGTH-1,
-	parameter 	PWM_FREQUENCY					=CLOCK_FREQUENCY/16,  //(MAX_VALUE-1)
+	parameter 	PWM_FREQUENCY					=CLOCK_FREQUENCY/16,  //(MAX_VALUE)
 	parameter 	DEEP_FILL_FACTOR				=PACK_LENGTH
 )
 (
