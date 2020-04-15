@@ -149,11 +149,11 @@ module SPI_FPGA_SLAVE
 	assign IN_RESET_1_1				=		IN_RESET						&(CPHA)&(CPOL);
 	
 	
-	assign MISO=
+	assign MISO = !CS?
 		MISO_0_0&(!CPHA)&(!CPOL)|
 		MISO_0_1&(!CPHA)&(CPOL)|
 		MISO_1_0&(CPHA)&(!CPOL)|
-		MISO_1_1&(CPHA)&(CPOL);		
+		MISO_1_1&(CPHA)&(CPOL)	:	1'bz;		
 	
 	assign RECEIVE_UNTRANSFORMED_DATA=
 		OUT_RECEIVE_DATA_0_0*(!CPHA)*(!CPOL)+
